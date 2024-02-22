@@ -20,11 +20,6 @@ function App() {
     if (numberAllowed) str += "0123456789";
     if (charAllowed) str += "{}/()*&^%$#@!";
 
-    // Array.from(length).forEach((el) => {
-    //   el = Math.floor(Math.random() * length + 1);
-    //   pass += str.charAt(el);
-    // });
-
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1); // Generates a random number from the strings length
       pass += str.charAt(char); // random character generates on each iteration
@@ -62,7 +57,7 @@ function App() {
             <input
               type="range"
               min={8}
-              max={25}
+              max={20}
               value={length}
               className=" cursor-pointer"
               onChange={(e) => {
